@@ -11,4 +11,35 @@ p{
     color:darkblue
     background-color: royalblue;
 }
-.main
+.box{
+    margin: 10px;
+    }
+    
+    .box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+    
+    .box{
+    border: 1px solid black;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: solid blue ;
+    }
+    
+    .box{
+    padding: 10px;
+    }
+    
+    .box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    
+    .box{
+    box-sizing: border-box;
+    }
