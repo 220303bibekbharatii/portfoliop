@@ -1,271 +1,126 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* Global styles */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-        }
+      /* CSS Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-        a {
-            color: #007bff;
-        }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
 
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      nav {
+        background-color: #f2f2f2;
+        overflow: hidden;
+      }
 
-        /* Header */
-        header {
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
+      nav a {
+        display: block;
+        float: left;
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        width: 25%;
+      }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      nav a:hover {
+        background-color: #ddd;
+      }
 
-        nav ul li {
-            margin: 0 10px;
-        }
+      section {
+        padding: 20px;
+      }
 
-        nav ul li a {
-            text-decoration: none;
-        }
+      h1 {
+        margin-bottom: 20px;
+      }
 
-        /* About Me section */
-        #about-me {
-            background-color: #f0f0f0;
-            padding: 50px;
-        }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-        /* Projects section */
-        #projects {
-            background-color: #fff;
-            padding: 50px;
-        }
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
 
-        #projects ul {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+      .project-image {
+        max-width: 100%;
+        height: auto;
+      }
 
-        #projects li {
-            width: calc(33.33% - 20px);
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #e3e3e3;
-            border-radius: 5px;
-        }
+      /* JavaScript */
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
 
-        #projects li h3 {
-            font-size: 24px;
-            margin-top: 0;
-        }
-
-        #projects li p {
-            margin-bottom: 10px;
-        }
-
-        #projects li a {
-            display: block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        /* Skills section */
-        #skills {
-            background-color: #f0f0f0;
-            padding: 50px;
-        }
-
-        #skills ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        #skills li {
-            margin: 0 20px;
-            font-size: 20px;
-        }
-
-        /* Education section */
-        #education {
-            background-color: #fff;
-            padding: 50px;
-        }
-
-        #education ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #education li {
-            width: calc(50% - 10px);
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #e3e3e3;
-            border-radius: 5px;
-        }
-
-        #education li h3 {
-            font-size: 24px;
-            margin-top: 0;
-        }
-
-        #education li p {
-            margin-bottom: 10px;
-        }
-
-        /* Contact section */
-        #contact {
-            background-color: #f0f0f0;
-            padding: 50px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #e3e3e3;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0069d9;
-        }
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu');
+      });
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>My Portfolio</h1>
     </header>
-
-    <section id="about-me">
-        <h2>About me</h2>
-        <p> My name is Bibek Bharati, and I am a student pursuing a Bachelor of IT in Cyber Security and Ethical Hacking
-            from Coventry University at College Softwarica in Nepal. As an aspiring cybersecurity professional, I am
-            passionate about using my skills to protect organizations and individuals from digital threats.
-
-            Throughout my studies, I have gained knowledge and expertise in areas such as network security, information
-            security, and ethical hacking. I have also participated in various cybersecurity competitions, including CTF
-            (Capture The Flag) events, to hone my practical skills and stay up-to-date with the latest trends in the
-            field.
-
-            In addition to my academic pursuits, I am also committed to giving back to my community. I am involved in
-            various volunteer projects, including teaching basic computer skills to underprivileged children in my local
-            area.
-
-            As I move forward in my career, I am excited to continue learning and growing in the field of cybersecurity.
-            Whether working independently or as part of a team, I am dedicated to using my skills to make a positive
-            impact and help create a safer digital world.</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <h3>Project 1</h3>
+          <img
+            class="project-image"
+            src="https://via.placeholder.com/350x150"
+            alt="Project 1"
+          />
+          <p>Description of Project 1</p>
+        </li>
+        <li>
+          <h3>Project 2</h3>
+          <img
+            class="project-image"
+            src="https://via.placeholder.com/350x150"
+            alt="Project 2"
+          />
+          <p>Description of Project 2</p>
+        </li>
+        <li>
+          <h3>Project 3</h3>
+          <img
+            class="project-image"
+            src="https://via.placeholder.com/350x150"
+            alt="Project 3"
+          />
+          <p>Description of Project 3</p>
+        </li>
+      </ul>
     </section>
-  
+    <script>
+      // JavaScript Code
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-                <a href="#">View project</a>
-            </li>
-            <li>
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-                <a href="#">View project</a>
-            </li>
-            <li>
-                <h3>Project 3</h3>
-                <p>Description of project 3.</p>
-                <a href="#">View project</a>
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Pen testing</li>
-            <li>Web designing</li>
-            <li>Reverse Engineering</li>
-        </ul>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <h3>Bachelor's Degree</h3>
-                <p>Cyber security and Ethical hacking</p>
-                <p>Coventry University</p>
-            </li>
-
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-
-    <footer>
-        <p>Copyright © Your Name</p>
-    </footer>
-</body>
-
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu');
+      });
+    </script>
+  </body>
 </html>
